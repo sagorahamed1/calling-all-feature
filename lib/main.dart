@@ -95,18 +95,17 @@ class HomeScreen extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => ZegoUIKitPrebuiltCall(
-          appID: 722124882,
-          appSign: '344f57aee3a6384149a9367fc105f56f1807bea13b73462b660e6672fc09582c',
+          appID: Utils.appId,
+          appSign: Utils.appSign,
           userID: userName,
-          userName: userName,
-          // resourceID: roomId,
-          // isVideoCall: false,
+          userName: 'userName',
           plugins: [ZegoUIKitSignalingPlugin()], callID: roomId, config: ZegoUIKitPrebuiltCallConfig.oneOnOneVoiceCall(),
         ),
       ),
     );
   }
 }
+
 
 class CallInvitation extends StatelessWidget {
   final Widget child;
